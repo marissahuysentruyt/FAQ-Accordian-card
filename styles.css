@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,8 +8,148 @@
 
 body {
     background: linear-gradient(hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+}
+
+#container {
+    /* border: 1px solid black; */
+    background-color: #fff;
+    display: flex;
+    width: 75%;
+    height: 509px;
+    flex-basis: 100%;
+    margin: 10% auto;
+    padding: 0;
+    border-radius: 22px;
+
+}
+
+.image-container {
+    flex-basis: 50%;
+    /* overflow: hidden; */
+    /* border: 1px solid black; */
+
+}
+
+/* .image-container img {
+    width: 100%;
+    height: auto;
+} */
+
+.layer-images {
+    /* border: 1px solid red; */
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#bg-desktop {
+    /* border: 1px solid red; */
+    position: absolute;
+    width: 200%;
+    top: -62%;
+    left: -118%;
+    height: auto;
+}
+
+#woman {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 10%;
+    right: 18%;
+    width: 100%;
+    height: auto;
+}
+
+#box {
+    position: absolute;
+    /* width: 100%; */
+    height: auto;
+    top: 48%;
+    left: 6.1%;
+}
+
+#woman-mobile,
+#bg-mobile {
+    display: none;
+}
+
+.questions {
+    flex-basis: 50%;
+    font-family: "Kumbh Sans";
+    /* border: 1px solid black; */
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: column;
+    padding: 7.5% 10% 7.5% 0;
+}
+
+.questions h3 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 7.5% 0;
+    /* border: 1px solid red; */
+}
+
+.questions .question {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s ease;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    font-size: 1.3em;
+}
+
+.question .visible {
+    /* background-color:hsl(14, 88%, 65%); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5em;
+}
+
+.questions .question img {
+    width: 10px;
+    height: 6px;
     
 }
+
+/* test for animation 
+.questions .question img:hover {
+    animation: pointUp 0.4s forwards 1 ;
+}
+*/
+
+/* on click: 
+1. trigger pointUp animation 
+2. font-weight: 700 for questions 
+3. display:block answers (shift content down?) 
+4. then reverse everything when cicked off */
+
+
+@keyframes pointUp {
+    0% {
+        transform: none;
+    }
+
+    100% {
+        transform: rotateX(180deg);
+    }
+}
+
+.questions .question:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.questions .answer {
+    border: 1px solid black;
+    display: none;
+}
+
+
 
 .attribution {
      font-size: 11px; text-align: center; 
@@ -16,3 +158,7 @@ body {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 } 
+
+.attribution a:hover {
+    color: hsl(14, 88%, 65%);
+}

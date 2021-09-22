@@ -6,53 +6,109 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | FAQ Accordion Card</title>
-
 </head>
+
 <body>
 
-  <div class="question">
-    How many team members can I invite?
-  </div> 
-  <div class="answer">
-    You can invite up to 2 additional users on the Free plan. There is no limit on 
-    team members for the Premium plan.
-  </div>
-  
-  <div class="question">
-    What is the maximum file upload size?
-  </div>
-  <div class="answer">
-  No more than 2GB. All files in your account must fit your allotted storage space.
+  <div id="container">
+
+    <div class="image-container">
+    
+      <div class="layer-images">
+        <img id="bg-desktop" src="images/bg-pattern-desktop.svg" alt="">
+        <img id="woman"src="images/illustration-woman-online-desktop.svg" alt="">
+        
+      </div>
+
+      <img id="box"src="images/illustration-box-desktop.svg" alt="">
+
+      <div class="mobile-layers">
+        <img class="mobile" id="bg-mobile" src="images/bg-pattern-mobile.svg" alt="">
+        <img class="mobile" id="woman-mobile" src="images/illustration-woman-online-mobile.svg" alt="">
+      </div>
+      
+    </div>
+    
+    <div class="questions">
+      <h3>FAQ</h3>
+
+      <div class="question">
+        <div class="visible">
+          <p>How many team members can I invite?</p>
+
+          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer" id="answer1">
+          You can invite up to 2 additional users on the Free plan. There is no limit on 
+          team members for the Premium plan.
+        </div>
+
+      </div> 
+      
+      <div class="question">
+        <div class="visible">
+          <p>What is the maximum file upload size?</p>
+
+          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer" id="answer2">
+          No more than 2GB. All files in your account must fit your allotted storage space.
+        </div>
+
+      </div>
+
+      <div class="question">
+        <div class="visible">
+          <p>How do I reset my password?</p>
+
+          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer" id="answer3">
+          Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.
+        </div>
+
+      </div>
+
+      <div class="question">
+        <div class="visible">
+          <p>Can I cancel my subscription?</p>
+
+          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+        </div>
+        
+        <div class="answer" id="answer4">
+          Yes! Send us a message and we’ll process your request no questions asked.
+        </div>
+
+      </div>
+
+      <div class="question">
+        <div class="visible">
+          <p>Do you provide additional support?</p>
+
+          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+        </div>
+
+        <div class="answer" id="answer5">
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="question">
-    How do I reset my password?
-  </div>
-  <div class="answer">
-    Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-  </div>
 
-  <div class="question">
-    Can I cancel my subscription?
-  </div>
-  <div class="answer">
-  Yes! Send us a message and we’ll process your request no questions asked.
-  </div>
-
-  <div class="question">
-    Do you provide additional support?
-  </div>
-  <div class="answer">
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-  </div>
-
-
-time estimated: 3 hours
-time completed: 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.marissahuysentruyt.com">Marissa Huysentruyt</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
