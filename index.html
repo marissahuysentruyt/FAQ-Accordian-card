@@ -10,7 +10,7 @@
 
 <body>
 
-  <div id="container">
+  <main class="body-container">
 
     <div class="image-container">
     
@@ -20,7 +20,7 @@
         
       </div>
 
-      <img id="box"src="images/illustration-box-desktop.svg" alt="">
+      <img id="box" src="images/illustration-box-desktop.svg" alt="">
 
       <div class="mobile-layers">
         <img class="mobile" id="bg-mobile" src="images/bg-pattern-mobile.svg" alt="">
@@ -29,85 +29,85 @@
       
     </div>
     
-    <div class="questions">
+    <section class="faq">
       <h3>FAQ</h3>
 
-      <div class="question">
-        <div class="visible">
+      <section class="question">
+        <div class="visible" index-number="0"> 
           <p>How many team members can I invite?</p>
 
-          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+          <img src="images/icon-arrow-down.svg" alt="">
         </div>
 
-        <div class="answer" id="answer1">
+        <div class="invisible" index-number="0">
           You can invite up to 2 additional users on the Free plan. There is no limit on 
           team members for the Premium plan.
         </div>
 
-      </div> 
+      </section> 
       
-      <div class="question">
-        <div class="visible">
+      <section class="question">
+        <div class="visible" index-number="1">
           <p>What is the maximum file upload size?</p>
 
-          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+          <img src="images/icon-arrow-down.svg" alt="">
         </div>
 
-        <div class="answer" id="answer2">
+        <div class="invisible" index-number="1">
           No more than 2GB. All files in your account must fit your allotted storage space.
         </div>
 
-      </div>
+      </section>
 
-      <div class="question">
-        <div class="visible">
+      <section class="question">
+        <div class="visible" index-number="2">
           <p>How do I reset my password?</p>
 
-          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+          <img src="images/icon-arrow-down.svg" alt="">
         </div>
 
-        <div class="answer" id="answer3">
+        <div class="invisible" index-number="2">
           Click “Forgot password” from the login page or “Change password” from your profile page.
           A reset link will be emailed to you.
         </div>
 
-      </div>
+      </section>
 
-      <div class="question">
-        <div class="visible">
+      <section class="question">
+        <div class="visible" index-number="3">
           <p>Can I cancel my subscription?</p>
 
-          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+          <img src="images/icon-arrow-down.svg" alt="">
         </div>
         
-        <div class="answer" id="answer4">
+        <div class="invisible" index-number="3">
           Yes! Send us a message and we’ll process your request no questions asked.
         </div>
 
-      </div>
+      </section>
 
-      <div class="question">
-        <div class="visible">
+      <section class="question">
+        <div class="visible" index-number="4">
           <p>Do you provide additional support?</p>
 
-          <img class="arrow" src="images/icon-arrow-down.svg" alt="">
+          <img src="images/icon-arrow-down.svg" alt="">
         </div>
 
-        <div class="answer" id="answer5">
+        <div class="invisible" index-number="4">
           Chat and email support is available 24/7. Phone lines are open during normal business hours.
         </div>
 
-      </div>
+      </section>
 
     </div>
 
-  </div>
+  </main>
 
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.marissahuysentruyt.com">Marissa Huysentruyt</a>.
-  </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
