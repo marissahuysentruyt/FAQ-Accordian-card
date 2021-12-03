@@ -96,7 +96,7 @@ body {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    transition: all 0.1s ease;
+    transition: all 0.5s ease;
     border-bottom: 1px solid hsl(240, 5%, 91%);
     font-size: 1.3em;
     font-weight: 400;
@@ -129,9 +129,7 @@ body {
 
 
 /* on click: 
-2. font-weight: 700 for faq 
-3. display:block answers (shift content down?) 
-4. then reverse everything when clicked off */
+still missing: reverse everything when clicked off */
 
 
 .faq .question:hover {
@@ -139,7 +137,9 @@ body {
     cursor: pointer;
 }
 
-/* arrow animation  */
+/* arrow animation
+not figured out yet
+I want to trigger the arrow to point upward when the question is selected, when the answer is displayed, the   */
 .faq .arrow {
     /* border: 1px solid red; */
     animation: pointUp 500ms ease-in-out forwards 1;
@@ -149,19 +149,14 @@ body {
     color: black;
     /* border: 1px solid black; */
     display: none;
-}
+    padding-bottom: 1em;
 
-.faq .inactive {
-    font-weight: 400;
 }
 
 .faq .js-dropdown {
     display: block;
 }
 
-.faq .active:hover {
-    color: black;
-}
 
 
 .attribution {
