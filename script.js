@@ -34,8 +34,9 @@ for(let question of questions) {
                 
             }
 
-            // carrot variables
+            // carrot variables- NOT FIGURED OUT! onclick="animation()" is already in the html file. if the carrot & answer index-number are the same, AND the answer is displayed, I want to trigger the carrot to point upward, all with the question click. .animate is in the stylesheet...not sure. 
             let carrot = document.querySelectorAll(".carrot");
+            // animation function for carrot? 
             animation = () => {
             if(carrot.getAttribute("index-number") === answer.getAttribute("index-number") && (answer.style.display = "block")) {
                 carrot.classList.add(".animate");

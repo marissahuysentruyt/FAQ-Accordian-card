@@ -139,7 +139,7 @@ body {
 /* carrot animation
 not figured out yet
 trigger the carrot to point upward when the question is clicked, when the answer is displayed   */
-.faq .animate {
+.animate {
     /* border: 1px solid red; */
     animation: pointUp 500ms ease-in-out forwards 1;
 }
