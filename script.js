@@ -8,7 +8,7 @@ for(let question of questions) {
     question.addEventListener("click", function(event) {
         //new variable, storing the event target 
         const clicked = event.target;
-        //new variable, create displayed answer ('js-dropdown' & 'active')
+        //new variable to create displayed answer, giving class to the question ('js-dropdown')
         const displayed = document.querySelector(".js-dropdown");
 
         // if the clicked item has a class of js-dropdown, remove it
@@ -27,11 +27,20 @@ for(let question of questions) {
             if(answer.getAttribute("index-number") === question.getAttribute("index-number")) {
                 answer.style.display = "block";
                 question.style.fontWeight = "700";
+            // if they don't match, don't display
             } else {
                 answer.style.display = "none";
                 // question.style.fontWeight = "400"; //this is overriding the if statement, except for last question
                 
             }
+
+            // carrot variables
+            let carrot = document.querySelectorAll(".carrot");
+            animation = () => {
+            if(carrot.getAttribute("index-number") === answer.getAttribute("index-number") && (answer.style.display = "block")) {
+                carrot.classList.add(".animate");
+            }
+        }
         }
         
     });

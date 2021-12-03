@@ -96,7 +96,7 @@ body {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     border-bottom: 1px solid hsl(240, 5%, 91%);
     font-size: 1.3em;
     font-weight: 400;
@@ -117,32 +117,11 @@ body {
     /* border: 1px solid red; */
 }
 
-@keyframes pointUp {
-    0% {
-        transform: none;
-    }
-
-    100% {
-        transform: rotateX(180deg);
-    }
-}
-
-
-/* on click: 
-still missing: reverse everything when clicked off */
-
+/* still missing: reverse everything when clicked off */
 
 .faq .question:hover {
     color: hsl(14, 88%, 65%);
     cursor: pointer;
-}
-
-/* arrow animation
-not figured out yet
-I want to trigger the arrow to point upward when the question is selected, when the answer is displayed, the   */
-.faq .arrow {
-    /* border: 1px solid red; */
-    animation: pointUp 500ms ease-in-out forwards 1;
 }
 
 .faq .invisible {
@@ -157,10 +136,28 @@ I want to trigger the arrow to point upward when the question is selected, when 
     display: block;
 }
 
+/* carrot animation
+not figured out yet
+trigger the carrot to point upward when the question is clicked, when the answer is displayed   */
+.faq .animate {
+    /* border: 1px solid red; */
+    animation: pointUp 500ms ease-in-out forwards 1;
+}
 
+@keyframes pointUp {
+    0% {
+        transform: none;
+    }
+
+    100% {
+        transform: rotateX(180deg);
+    }
+}
 
 .attribution {
-     font-size: 11px; text-align: center; 
+     font-size: 11px; 
+     text-align: center; 
+     font-family: "Kumbh Sans";
 }
 
 .attribution a { 
@@ -169,4 +166,137 @@ I want to trigger the arrow to point upward when the question is selected, when 
 
 .attribution a:hover {
     color: hsl(14, 88%, 65%);
+}
+
+
+/* responsive styles */
+@media only screen and (max-width: 1024px) {
+    #bg-desktop {
+        /* border: 1px solid red; */
+        position: absolute;
+        width: 200%;
+        top: -22%;
+    }
+    
+    #woman {
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 25%;
+        
+    }
+    
+    #box {
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 48%;
+        left: 5%;
+        width: 15%;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .body-container {
+        flex-direction: column;
+        width: 80%;
+        /* border: 1px solid red; */
+        height: auto;
+        margin: 20% auto;
+    }
+
+    #woman-mobile,
+    #bg-mobile {
+        display: block;
+        /* border: 1px solid red; */
+    }
+
+    #woman-mobile {
+        position: absolute;
+        text-align: center;
+        top: 6%;
+        margin-left: -4%;
+    }
+
+    #bg-desktop {
+        /* border: 1px solid red; */
+        display: none;
+    }
+    
+    #woman {
+        /* border: 1px solid red; */
+        display: none;
+    }
+    
+    #box {
+        display: none;
+    }
+
+    .invisible {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column-reverse;
+        /* border: 1px solid red; */
+    }
+
+    .mobile-layers {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        align-items: center;
+    }
+
+    .faq {
+        flex-basis: 100%;
+        /* border: 1px solid black; */
+        padding: 7.5% 10% 7.5% 10%;
+    }
+    
+    .faq h3 {
+        margin: auto;
+        margin-bottom: 1em;
+        /* border: 1px solid red; */
+    }  
+}
+
+@media only screen and (max-width: 660px) {
+    #woman-mobile {
+        top: 1.5%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .body-container {
+        margin: 30% auto 20% auto;
+    }
+
+    #woman-mobile {
+        top: 5%;
+    }
+
+    .question p {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #woman-mobile {
+        top: 1%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .body-container {
+        margin: 40% auto 20% auto;
+    }
+
+    #woman-mobile {
+        top: 6%;
+    }
+    
 }
