@@ -9,9 +9,7 @@
 </head>
 
 <body>
-
-  <main class="body-container">
-
+  <main>
     <div class="image-container">
     
       <div class="layer-images">
@@ -29,80 +27,88 @@
       
     </div>
     
-    <section class="faq">
-      <h3>FAQ</h3>
+    <section class="faq-accordion">
+      <h2 class="faq-accordion__heaader">FAQ</h2>
 
-      <section class="question">
-        <div class="visible" index-number="0"> 
-          <p>How many team members can I invite?</p>
+      <section class="faq-question">
+        <h3 class="faq-question__header collapsed"> 
+          <button type="button" id="question1-button" aria-controls="question1-panel" aria-expanded="false">
+            How many team members can I invite?
+            <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </h3>
 
-          <img class="carrot" index-number="0" src="images/icon-arrow-down.svg" alt="">
+        <div class="faq-question__panel" id="question1-panel">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+          </p>
         </div>
-
-        <div class="invisible" index-number="0">
-          You can invite up to 2 additional users on the Free plan. There is no limit on 
-          team members for the Premium plan.
-        </div>
-
       </section> 
       
-      <section class="question">
-        <div class="visible" index-number="1">
-          <p>What is the maximum file upload size?</p>
+      <section class="faq-question">
+        <h3 class="faq-question__header collapsed">
+          <button type="button" id="question2-button" aria-controls="question2-panel" aria-expanded="false">
+            What is the maximum file upload size?
+            <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </h3>
 
-          <img class="carrot" index-number="1" src="images/icon-arrow-down.svg" alt="">
+        <div class="faq-question__panel" id="question2-panel">
+          <p>
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
         </div>
-
-        <div class="invisible" index-number="1">
-          No more than 2GB. All files in your account must fit your allotted storage space.
-        </div>
-
       </section>
 
-      <section class="question">
-        <div class="visible" index-number="2">
-          <p>How do I reset my password?</p>
+      <section class="faq-question">
+        <h3 class="faq-question__header collapsed">
+          <button type="button" id="question3-button" aria-controls="question3-panel" aria-expanded="false">
+            How do I reset my password?
+            <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </h3>
 
-          <img onclick="animation()" index-number="2" src="images/icon-arrow-down.svg" alt="">
+        <div class="faq-question__panel" id="question3-panel">
+          <p>
+            Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+          </p>
         </div>
-
-        <div class="invisible" index-number="2">
-          Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.
-        </div>
-
       </section>
 
-      <section class="question">
-        <div class="visible" index-number="3">
-          <p>Can I cancel my subscription?</p>
-
-          <img class="carrot" onclick="animation()" index-number="3" src="images/icon-arrow-down.svg" alt="">
-        </div>
+      <section class="faq-question">
+        <h3 class="faq-question__header collapsed">
+          <button type="button" id="question4-button" aria-controls="question4-panel" aria-expanded="false">
+            Can I cancel my subscription?
+            <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </h3>
         
-        <div class="invisible" index-number="3">
-          Yes! Send us a message and we’ll process your request no questions asked.
+        <div class="faq-question__panel" id="question4-panel">
+          <p>
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
         </div>
-
       </section>
 
-      <section class="question">
-        <div class="visible" index-number="4">
-          <p>Do you provide additional support?</p>
+      <section class="faq-question">
+        <h3 class="faq-question__header collapsed">
+          <button type="button" id="question5-button" aria-controls="question5-panel" aria-expanded="false">
+            Do you provide additional support?
+            <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </h3>
 
-          <img class="carrot" index-number="4" src="images/icon-arrow-down.svg" alt="">
+        <div class="faq-question__panel" id="question5-panel">
+          <p>
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </p>
         </div>
-
-        <div class="invisible" index-number="4">
-          Chat and email support is available 24/7. Phone lines are open during normal business hours.
-        </div>
-
       </section>
 
     </div>
 
+    </section>
   </main>
-
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
