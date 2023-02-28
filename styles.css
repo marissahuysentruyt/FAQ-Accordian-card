@@ -11,8 +11,9 @@ html {
 }
 
 body {
-    background: linear-gradient(hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    background: linear-gradient(hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%), no-repeat;
     padding-top: 6rem;
+    height: 100vh;
 }
 
 main {
@@ -24,19 +25,82 @@ main {
     margin: 10% auto;
     padding: 0;
     border-radius: 22px;
+    position: relative;
+    gap: 2rem;
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.24);
+}
+
+@media (min-width: 48rem) {
+    main {
+        flex-direction: row;
+        /* border: 1px solid black; */
+        margin: auto;
+    }
 }
 
 .image-container {
     /* border: 1px solid black; */
     position: relative;
-    height: 8vh;
+    height: 2vh;
     margin: auto;
 }
 
-#bg-desktop,
-#woman,
-#box {
+@media (min-width: 48rem) {
+    .image-container {
+        /* border: 1px solid red; */
+        height: auto;
+        width: 50%;
+        margin: 0;
+    }
+}
+
+.desktop-layers {
     display: none;
+}
+
+@media (min-width: 48rem) {
+    .desktop-layers {
+        /* border: 1px solid blue; */
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        /* overflow: hidden; */
+        z-index: 1;
+    }
+
+    #bg-desktop {
+        /* border: 1px solid red; */
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: -50%;
+        left: -5rem;
+    }
+
+    #woman-desktop {
+        position: absolute;
+        /* border: 1px solid red; */
+        width: 100%;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+
+    #box-desktop {
+        /* border: 1px solid red; */
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        top: 8rem;
+        left: 0;
+    }
+}
+
+@media (min-width: 65rem) {
+    #woman-desktop { 
+        top: 2rem;
+    }
 }
 
 .mobile-layers {
@@ -52,49 +116,17 @@ main {
 
 #bg-mobile {
     position: relative;
-    top: -5rem;
+    top: -6rem;
+    left: 1rem;
 }
 
 @media (min-width: 48rem) {
-    .desktop-layers {
-        /* border: 1px solid red; */
-        position: relative;
-        height: 100%;
-        width: 100%;
-    }
-
-    #bg-desktop {
-        /* border: 1px solid red; */
-        position: absolute;
-        width: 200%;
-        top: -62%;
-        left: -118%;
-        height: auto;
-    }
-    
-    #woman {
-        /* border: 1px solid red; */
-        position: absolute;
-        top: 10%;
-        right: 18%;
-        width: 100%;
-        height: auto;
-    }
-    
-    #box {
-        position: absolute;
-        /* width: 100%; */
-        height: auto;
-        top: 48%;
-        left: 6.1%;
-    }
-
-    #woman-mobile,
-    #bg-mobile {
+    .mobile-layers {
         display: none;
     }
 }
 
+/* the entire accordion container */
 .faq-accordion {
     font-family: "Kumbh Sans";
     /* border: 1px solid black; */
@@ -105,12 +137,23 @@ main {
     padding: 7.5%;
     align-items: center;
     width: 100%;
+    position: relative;
+    z-index: 5;
+    border-radius: 22px;
 }
 
+@media (min-width: 48rem) {
+    .faq-accordion {
+        width: 60%;
+    }
+}
+
+/* each button/question's section */
 .faq-question {
     width: 100%;
 }
 
+/* each heading that contains the button */
 .faq-question__header {
     text-transform: uppercase;
     font-weight: 700;
@@ -119,10 +162,12 @@ main {
     /* click */
 }
 
+/* when things are all collapsed */
 .collapsed {
     width: 100;
 }
 
+/* the question is technically button that controls the answer div */
 button {
     background-color: transparent;
     border: 1px solid transparent;
@@ -157,10 +202,12 @@ button[aria-expanded="true"] {
     font-weight: 700;
 }
 
+/* answer panel when collapsed */
 .collapsed ~ .faq-question__panel {
     display: none;
 }
 
+/* displayed answer panel */
 .faq-question__panel {
     color: black;
     /* border: 1px solid black; */
@@ -172,6 +219,7 @@ button[aria-expanded="true"] {
      font-size: 0.75rem; 
      text-align: center; 
      font-family: "Kumbh Sans";
+     margin-top: 2rem;
 }
 
 .attribution a { 
@@ -181,4 +229,8 @@ button[aria-expanded="true"] {
 
 .attribution a:hover {
     text-decoration: underline;
+}
+
+summary::marker {
+    content: url("../images/icon-arrow-down.svg");
 }
